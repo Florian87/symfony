@@ -1,0 +1,18 @@
+{% extends "TroiswaBackBundle::layout.html.twig" %}
+
+{% block content %}
+
+       <div class="row">
+        <div class="col-lg-12">
+            {% for value in allActeurs %}
+				<p>{{value.prenom}} {{value.nom}} est 
+				{% if value.sexe == 0 %}
+			    	un homme.
+				{% else %}
+					une femme.
+				{% endif %} {{value.biographie}} {{value.dateNaissance|date("Y-m-d")}} <a href="{{path("troiswa_back_one_acteur",{"id":value.id})}}">Voir</a> <a href="{{path("troiswa_back_acteur_editer",{"id":value.id})}}">Éditer</a></p>
+			{% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

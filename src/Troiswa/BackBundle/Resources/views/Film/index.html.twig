@@ -1,0 +1,13 @@
+{% extends "TroiswaBackBundle::layout.html.twig" %}
+
+{% block content %}
+
+       <div class="row">
+        <div class="col-lg-12">
+            {% for value in allFilms %}
+				<p>{{value.titre}} {{value.description}} <img src="{{ asset('image/film/') ~ value.image }}" width="200px"> Sorti en {{value.dateSortie|date("Y-m-d")}} duree {{value.duree}} minutes {{value.note}}/5 <a href="{{path("troiswa_back_film_editer",{"id":value.id})}}">Éditer</a></p>
+			{% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

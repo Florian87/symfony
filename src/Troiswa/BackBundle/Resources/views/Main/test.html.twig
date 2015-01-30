@@ -1,0 +1,18 @@
+<!DOCTYPE hrml>
+<html lang="fr";>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	{% if old >= 18 %}
+    <p>{{firstname|upper}} est majeur.</p>
+	{% else %}
+    <p>{{firstname|capitalize}} est mineur.</p>
+	{% endif %}
+	{% for value in allActeurs %}
+		{{value.prenom}}
+	{% endfor %}
+	<a href="{{path("troiswa_back_prenom")}}">Lien vers la page prenom</a>
+	<a href="{{path("troiswa_back_theme")}}">Lien vers la page theme</a>
+</body>

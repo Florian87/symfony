@@ -1,0 +1,19 @@
+<!DOCTYPE hrml>
+<html lang="fr";>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+	<h1>theme</h1>
+	<a href="{{path("troiswa_back_first_page")}}">Lien vers la première page</a>
+	<header>
+		{% block header %}
+		{% endblock %}
+	</header>
+	<section>
+		{% block main %}
+		<h1>Mon theme</h1>
+		{% endblock %}
+</body>

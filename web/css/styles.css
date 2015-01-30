@@ -1,0 +1,17 @@
+body{
+	width:200px;
+	height:500px;
+	margin:200px auto;
+	color:white;
+	font:bold 16px/1.5 'Arial',sans-serif;
+	text-transform:uppercase;
+}
+
+html{
+	background-color:#333;
+}
+
+p{
+	padding-left:10px;
+	margin-top:70px;
+}
